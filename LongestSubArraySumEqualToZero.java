@@ -2,13 +2,14 @@
 // we have to find the length of the longest
 // SubArray with the sum of all elements equal to zero.
 import java .util.*;
+import java .util.HashMap;
 public class LongestSubArraySumEqualToZero {
  public static    int maxLen(int a[],int n){
         HashMap<Integer,Integer> mpp = new HashMap<>();
         int maxi = 0;
         int sum = 0;
         for(int i=0;i<n;i++){
-            sum = sum+a[i];
+            sum = sum + a[i];
             if(sum == 0 ){
                 maxi = i+1;
             }
@@ -31,7 +32,7 @@ public class LongestSubArraySumEqualToZero {
             ar[i] = sc.nextInt();
 
         }
-        System.out.println("Longest subarray with sum 0 is "+ maxLen(ar,n));
+        System.out.println("Longest sub array with sum 0 is "+ maxLen(ar,n));
 
     }
 }
