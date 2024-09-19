@@ -2,7 +2,6 @@
 // in the array;if n=6 then n/3 =2 that means u have to return at most
 //2 elements
 
-import java.util.Arrays;
 import java.util.*;
 import java.util.Scanner;
 
