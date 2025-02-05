@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.*;
+import static java.lang.Math.sqrt;
 
 public class PrintAllPrimeFactor {
     public static void main(String []args){
