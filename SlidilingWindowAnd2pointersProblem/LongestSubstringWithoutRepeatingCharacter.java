@@ -15,21 +15,20 @@ public class LongestSubstringWithoutRepeatingCharacter {
                 l = Math.max(mp.get(s.charAt(r)) + 1, l);
 
             mp.put(s.charAt(r), r);
-            len = Math.max(len,r-l+1);
+            len = Math.max(len, r - l + 1);
             r++;
 
         }
 
-
-        
         return len;
     }
-    public static void main(String [] args){
-        Scanner sc = new Scanner (System.in);
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-       int t =  subStringFunc(s);
-       System.out.println("the length of longest sub string with no repeating character" +
-               "is "+t+ "  "+s);
+        int t = subStringFunc(s);
+        System.out.println("the length of longest sub string with no repeating character" +
+                "is " + t + "  " + s);
 
     }
 
