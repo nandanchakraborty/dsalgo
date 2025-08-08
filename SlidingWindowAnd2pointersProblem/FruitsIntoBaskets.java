@@ -45,3 +45,14 @@ public class FruitsIntoBaskets {
         System.out.println("Highest number of fruits in the baskets is " + ans);
     }
 }
+/*Input : fruits = [1, 2, 3, 2, 2]
+
+Output : 4
+
+Explanation : we will start from second tree.
+
+The first basket contains fruits from second , fourth and fifth.
+
+The second basket will contain fruit from third tree.
+
+Hence ,we collected total of 4 fruits.*/
