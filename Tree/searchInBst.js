@@ -10,7 +10,7 @@ class BST{
         this.root = null;
     }
 
-    insert(value){
+    insert(value){ //insert a value
         const newNode = new Node(value);
         if(this.root === null){
             this.root = newNode;
@@ -39,7 +39,7 @@ class BST{
         }
     }
     //searching
-    search(value){
+    search(value){//search a value in tree
         let current = this.root;
         while(current != null){
             if(value === current.value) return true;
@@ -64,7 +64,81 @@ class BST{
             
         }
 
+    deleteAleaf(value){ //node that had no child
+          if (this.root === null) {
+        return;
     }
+
+    if (
+        this.root.value === value &&
+        this.root.left === null &&
+        this.root.right === null
+    ) {
+        this.root = null;
+        return;
+    }
+        let current = this.root;
+        while(current != null){
+            if(value < current.value){
+                if(current.left !== null &&
+                current.left.value === value &&
+                current.left.left === null &&
+                current.left.right === null){
+                    current.left = null;
+                    return;
+                }
+                current = current.left;
+            }
+            else if(value > current.value){
+                if(current.right !== null &&
+                current.right.value === value &&
+                current.right.left === null &&
+                current.right.right === null){
+                    current.right = null;
+                    return;
+                }
+                current = current.right;
+            }
+            else return;
+
+            
+        }
+    } 
+    
+    // deleteANodeWithOneChild(){
+    //     if(this.root === null) return;
+    //     let current = this.root;
+    //     if(current.left === null ){
+    //         if(current.right != null && current.right.left != null ){
+    //             current = current.right.left;
+    //             return;
+    //         }
+    //         else if(current.right != null && current.right.right != null){
+    //             current = current.right.right;
+    //             return;
+    //         }
+    //         current = current.right;
+
+    //     }
+    //     else if(current.right === null ){
+    //         if(current.left != null && current.left.left != null ){
+    //             current = current.left.left;
+    //             return;
+    //         }
+    //         else if(current.left != null && current.left.right != null){
+    //             current = current.left.right;
+    //             return;
+    //         }
+    //         current = current.left;
+
+    //     }
+        
+    //     }
+
+
+    }
+
+    
 
 
 const tree = new BST();
